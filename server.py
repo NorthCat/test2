@@ -45,11 +45,6 @@ class RPCService(rpyc.Service):
         pass
 
 
-    def exposed_get_answer(self):
-        raise ValueError('QWERTY')
-        return "Hello, world!!!!","QWERTY"
-
-
     def exposed_get(self, key): # this is an exposed method
         #print key
         return self.mysql.select(key)
